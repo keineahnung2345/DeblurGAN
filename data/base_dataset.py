@@ -14,8 +14,6 @@ class BaseDataset(data.Dataset):
 
 def get_transform(opt):
     transform_list = []
-    
-    
     if opt.resize_or_crop == 'resize_and_crop':
         osize = [opt.loadSizeX, opt.loadSizeY]
         transform_list.append(transforms.Scale(osize, Image.BICUBIC))
